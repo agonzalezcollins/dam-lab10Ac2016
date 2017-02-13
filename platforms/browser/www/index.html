@@ -38,10 +38,10 @@
     </head>
     <body>
         <div class="app">
-		<h1>Apache Cordova</h1>
+		<h1>Lab10A</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+                <!-- <p class="event listening"></p>
+                <p class="event received"></p> -->
 				
 				<div class="container-fluid">          
 					<div class="row"> 
@@ -65,43 +65,13 @@
 							<button type="button" class="btn btn-default" id="btnVaciar">Vaciar lista</button> 
 						</div> 
 					</div> 
-				</div> 
-			
-				<script src="js/bootstrap.js"></script>  
+				</div>
 
-				<script type="text/javascript">
-						$("#btnAddTarea").click( 
-							function(){ 
-							var str = "<a href=\"#\" class=\"list-group-item\" data-id-
-				tarea=\""+contadorTareas+"\">"+ 
-							"<h4 class=\"list-group-item-heading\">"+$("#tareaNombre").val()+"</h4>"+ 
-							"<p class=\"list-group-item-text\"><div class=\"checkbox\"><label><input 
-				type=\"checkbox\">Finalizar</label></div></p></a>";     
-								$("#listaTarea").append(str); 
-								$("#tareaNombre").val(''); 
-								contadorTareas++; 
-							}         
-						); 
-				  $("#btnVaciar").click( 
-							function(){ 
-								$("#listaTarea").empty(); 
-							} 
-						); 
-				  $('#listaTarea').on("click","a",function() { 
-								console.log($(this).attr('data-id-tarea')); 
-								var i = 1+$(this).index(); 
-								console.log(i); 
-				 $( "#listaTarea a:nth-child("+i+")" ).remove(); 
-								contadorTareas--; 
-						});
-				</script>
-				
            </div>
-			
-			
 		</div> 
 	           
         <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-    </body>
+	</body>
 </html>
